@@ -167,7 +167,11 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
+      <div className="minting">
+      {wallet && <h1>Apetopia Mint</h1>}
+
       {wallet && (
+        
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
 
@@ -220,6 +224,7 @@ const Home = (props: HomeProps) => {
           {alertState.message}
         </Alert>
       </Snackbar>
+      </div>
     </main>
   );
 };
